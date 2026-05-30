@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Future TRS Governance Presentation</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="side-nav" aria-label="Presentation navigation">
+      <button class="brand-chip" type="button" aria-label="Trade Remedies Authority logo">
+        <img src="assets/tra-logo.png" alt="Trade Remedies Authority" />
+      </button>
+
+      <nav class="nav-list">
+        <button class="nav-item active" data-slide="0"><span>01</span><strong>Overview</strong></button>
+        <button class="nav-item" data-slide="1"><span>02</span><strong>DCMG Flow</strong></button>
+        <button class="nav-item" data-slide="2"><span>03</span><strong>Go / No-Go</strong></button>
+        <button class="nav-item" data-slide="3"><span>04</span><strong>Security</strong></button>
+        <button class="nav-item" data-slide="4"><span>05</span><strong>Access</strong></button>
+        <button class="nav-item" data-slide="5"><span>06</span><strong>Data Flow</strong></button>
+        <button class="nav-item" data-slide="6"><span>07</span><strong>Data Hub</strong></button>
+        <button class="nav-item" data-slide="7"><span>08</span><strong>Close</strong></button>
+      </nav>
+    </aside>
+
+    <main class="stage" aria-live="polite">
+      <header class="top-bar">
+        <div>
+          <p class="eyebrow" id="sectionLabel">Future TRS Governance</p>
+          <h1 id="slideTitle">Future TRS Governance</h1>
+        </div>
+        <div class="toolbar">
+          <button class="ghost-button" id="prevBtn" type="button">← Prev</button>
+          <div class="progress-shell"><div class="progress-bar" id="progressBar"></div></div>
+          <button class="primary-button" id="nextBtn" type="button">Next →</button>
+        </div>
+      </header>
+
+      <section class="slides">
+        <article class="slide active" data-title="Future TRS Governance" data-label="Future TRS Governance">
+          <div class="cover-grid">
+            <div class="hero-card depth-card">
+              <span class="mini-label">TRA · Future TRS</span>
+              <h2>A Governance Story for Non-Technical Stakeholders</h2>
+              <p>How changes reach Production, how access is controlled, and how reference data changes enter DCMG.</p>
+              <div class="hero-flow">
+                <span>Request</span><i></i><span>Control</span><i></i><span>Approve</span><i></i><span>Release</span>
+              </div>
+            </div>
+            <div class="topic-stack">
+              <div class="topic-card depth-card"><b>1</b><h3>DCMG / CAB Process</h3><p>Final go/no-go gate for Production changes.</p></div>
+              <div class="topic-card depth-card"><b>2</b><h3>Security Personas</h3><p>Least-privilege access through Power Platform teams.</p></div>
+              <div class="topic-card depth-card"><b>3</b><h3>Reference Data</h3><p>Business-owned data changes feeding into DCMG.</p></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide" data-title="DCMG Process: Ticket to Production" data-label="Part 1 · DDaT Change Management Group">
+          <div class="slide-layout single">
+            <div class="flow-board depth-card">
+              <div class="flow-header"><h2>End-to-End Change Flow</h2><p>Every Production deployment is backed by triage, UAT, business sign-off and DCMG approval.</p></div>
+              <div class="process-flow dcmg-flow">
+                <div class="flow-node n1"><b>1</b><span>Request</span><small>DDaT Support Hub</small></div>
+                <div class="flow-node n2"><b>2</b><span>Triage and Analysis</span><small>Impact Assessment</small></div>
+                <div class="flow-node n3"><b>3</b><span>Change Needed?</span><small>Fix · Enhancement · Data</small></div>
+                <div class="flow-node n4"><b>4</b><span>Develop in Dev</span><small>Dedicated Environment</small></div>
+                <div class="flow-node n5"><b>5</b><span>Promote to Test</span><small>Ready for UAT</small></div>
+                <div class="flow-node n6"><b>6</b><span>Business UAT</span><small>Requester Validates</small></div>
+                <div class="flow-node n7"><b>7</b><span>Feedback Loop</span><small>Issues Return to Dev</small></div>
+                <div class="flow-node n8"><b>8</b><span>Business Sign-Off</span><small>Change Accepted</small></div>
+                <div class="flow-node n9 gate"><b>9</b><span>DCMG Review</span><small>Go / No-Go Decision</small></div>
+                <div class="flow-node n10"><b>10</b><span>Production Deploy</span><small>Controlled Release</small></div>
+                <div class="flow-node n11"><b>11</b><span>Post-Deployment Test</span><small>Close or Remediate</small></div>
+                <svg class="flow-lines connector-layer" aria-hidden="true"></svg>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide" data-title="DCMG Approval Gate" data-label="Part 1 · Approval Gate">
+          <div class="gate-layout">
+            <div class="gate-panel depth-card">
+              <h2>DCMG is the Production Release Gate</h2>
+              <p>The implementer raises the change request only after UAT is complete and the business has signed off.</p>
+              <div class="gate-steps">
+                <div><b>Inputs</b><span>Change request, test evidence, deployment plan, backout plan.</span></div>
+                <div><b>Decision</b><span>DCMG reviews risk, readiness and business approval.</span></div>
+                <div><b>Outcome</b><span>Approved changes progress to Production; rejected changes return for action.</span></div>
+              </div>
+            </div>
+            <div class="approval-flow depth-card">
+              <div class="approval-node">Business Sign-Off</div>
+              <div class="approval-arrow"></div>
+              <div class="approval-node hot">DCMG Go / No-Go</div>
+              <div class="approval-split">
+                <div><strong>GO</strong><span>Deploy to Production</span></div>
+                <div><strong>NO-GO</strong><span>Return to remediation</span></div>
+              </div>
+              <div class="approval-node">Post-Deployment Testing</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide" data-title="Security Personas and Roles" data-label="Part 2 · Power Platform Security">
+          <div class="security-layout">
+            <div class="security-intro depth-card">
+              <h2>Least Privilege by Design</h2>
+              <p>Personas are configured as Power Platform teams. Users inherit permissions from the persona team they belong to, avoiding direct ad-hoc access.</p>
+              <div class="inheritance-flow">
+                <span>User</span><i></i><span>Persona Team</span><i></i><span>Security Roles</span><i></i><span>Allowed Actions</span>
+              </div>
+            </div>
+            <div class="persona-grid" id="personaGrid"></div>
+          </div>
+        </article>
+
+        <article class="slide" data-title="Persona Access Boundaries" data-label="Part 2 · Access Boundaries">
+          <div class="access-layout">
+            <div class="persona-selector depth-card" id="personaSelector"></div>
+            <div class="access-card depth-card" id="accessCard"></div>
+          </div>
+        </article>
+
+        <article class="slide" data-title="Reference Data Change Flow" data-label="Part 3 · Reference Data Management">
+          <div class="slide-layout single">
+            <div class="flow-board depth-card data-board">
+              <div class="flow-header"><h2>Reference Data Change Flow</h2><p>Reference data changes are reviewed by the data owner/steward first, then implemented by DDaT and promoted through the DCMG lifecycle.</p></div>
+              <div class="data-flow">
+                <div class="data-node a"><b>1</b><span>Request Submitted</span><small>New or Changed Reference Data</small></div>
+                <div class="data-node b"><b>2</b><span>Data Owner / Steward</span><small>Review and Appraisal</small></div>
+                <div class="data-node c"><b>3</b><span>Approval Level</span><small>Business Authority Confirmed</small></div>
+                <div class="data-node d"><b>4</b><span>DDaT Implementation</span><small>Dev and Test Update</small></div>
+                <div class="data-node e"><b>5</b><span>Business UAT</span><small>Validate Data Outcome</small></div>
+                <div class="data-node f gate"><b>6</b><span>DCMG Process</span><small>Production Go/No-Go</small></div>
+                <div class="data-node g"><b>7</b><span>Production Reference Data</span><small>Controlled Release</small></div>
+                <svg class="data-lines connector-layer" aria-hidden="true"></svg>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide" data-title="Data Governance Hub" data-label="Part 3 · Governance Hub">
+          <div class="hub-layout">
+            <div class="hub-centre depth-card">
+              <div class="orb">Data<br/>Governance<br/>Hub</div>
+              <p>Defines who approves data, what evidence is required, and how a standard request enters DDaT delivery.</p>
+            </div>
+            <div class="hub-grid">
+              <div class="hub-card depth-card"><h3>Data Owners</h3><p>Named accountability for each dataset.</p></div>
+              <div class="hub-card depth-card"><h3>Data Stewards</h3><p>Operational appraisal and quality checks.</p></div>
+              <div class="hub-card depth-card"><h3>Approval Levels</h3><p>Clear authority before implementation.</p></div>
+              <div class="hub-card depth-card"><h3>Standard Form</h3><p>Consistent data-change request capture.</p></div>
+              <div class="hub-card depth-card"><h3>Metadata</h3><p>Purpose, owner, lifecycle and impact.</p></div>
+              <div class="hub-card depth-card"><h3>Audit Trail</h3><p>Traceability from request to Production.</p></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="slide" data-title="Integrated Governance Model" data-label="Summary">
+          <div class="closing-layout">
+            <div class="closing-card depth-card">
+              <h2>Three Independent Controls, One Joined-Up Governance Model</h2>
+              <p>DCMG controls Production change, persona teams control least-privilege access, and the Data Governance Hub controls reference data ownership before data changes enter DCMG.</p>
+              <div class="closing-flow">
+                <span>Change Governance</span><i></i><span>Access Governance</span><i></i><span>Data Governance</span><i></i><span>Safer Production</span>
+              </div>
+            </div>
+            <div class="outcomes depth-card">
+              <h3>Stakeholder Message</h3>
+              <ul>
+                <li>Business owns sign-off before Production.</li>
+                <li>DDaT implements only approved and tested changes.</li>
+                <li>Reference data changes are governed before release.</li>
+                <li>Power Platform access is persona-based and auditable.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

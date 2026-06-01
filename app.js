@@ -19,7 +19,7 @@ const personas = [
     summary: 'Leads case activity and coordinates investigation delivery.',
     roles: ['Application editor Role', 'Application Team Manager Role', 'Case Editor Role', 'Case Admin', 'Public File Publisher', 'Reference Data Reader'],
     can: ['Read and make changes to Application records.', 'Add team members to Application records.', 'Read and make changes to Case records.', 'Add team members to Case records.', 'Publish Files to Public File.', 'Read Reference Data.'],
-    cannot: ['Make changes to Reference Data.', 'Change security configuration or assign system roles.']
+    cannot: ['Make changes to Reference Data.', 'Progress Cases to the next stage.', 'Change security configuration or assign system roles.']
   },
   {
     name: 'Compliance Lead',

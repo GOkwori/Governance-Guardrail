@@ -39,8 +39,8 @@ const personas = [
     name: 'Audit & PMO',
     summary: 'Provides audit trail, reporting, project governance and delivery oversight.',
     roles: ['System Observer', 'Reference Data Reader'],
-    can: ['Read Application records.', 'Read Case records.', 'Publish Files to Public File.', 'Read Reference Data.'],
-    cannot: ['Make changes to Application records.', 'Add team members to Application records.', 'Make changes to Case records.', 'Add team members to Case records.', 'Make changes to Reference Data.', 'Progress Cases to the next stage.', 'Change security configuration or assign system roles.']
+    can: ['Read Application records.', 'Read Case records.', 'Read Reference Data.'],
+    cannot: ['Make changes to Application records.', 'Add team members to Application records.', 'Make changes to Case records.', 'Add team members to Case records.', 'Make changes to Reference Data.', 'Publish Files to Public File.', 'Progress Cases to the next stage.', 'Change security configuration or assign system roles.']
   },
   {
     name: 'Trade Advisory Service (TRAS)',

@@ -10,44 +10,44 @@ const personas = [
   {
     name: 'Head of Investigation',
     summary: 'Strategic oversight across investigation work and senior decision visibility.',
-    roles: ['Executive Oversight', 'Investigation Read', 'Reporting Viewer'],
-    can: ['View portfolio-level case and investigation status.', 'Review dashboards and audit summaries.', 'Approve or challenge key investigation decisions.'],
-    cannot: ['Perform operational case updates intended for investigators.', 'Change security configuration or assign system roles.', 'Bypass DCMG for Production-impacting changes.']
+    roles: ['Application editor Role', 'Application Team Manager Role', 'Case Editor Role', 'Case Admin', 'Public File Publisher', 'Reference Data Reader', 'Case Workflow Manager'],
+    can: ['Read and make changes to Application records.', 'Add team members to Application records.', 'Read and make changes to Case records.', 'Add team members to Case records.', 'Publish Files to Public File.', 'Read Reference Data.', 'Progress Cases to the next stage.'],
+    cannot: ['Make changes to Reference Data.', 'Change security configuration or assign system roles.']
   },
   {
     name: 'Lead Investigator',
     summary: 'Leads case activity and coordinates investigation delivery.',
-    roles: ['Investigation Lead', 'Case Management Advanced', 'Evidence Contributor'],
-    can: ['Create and manage assigned investigation records.', 'Allocate tasks and review team outputs.', 'Progress investigation milestones within authorised scope.'],
-    cannot: ['Access unrelated restricted investigation areas.', 'Approve reference data changes alone.', 'Change platform-level configuration.']
+    roles: ['Application editor Role', 'Application Team Manager Role', 'Case Editor Role', 'Case Admin', 'Public File Publisher', 'Reference Data Reader'],
+    can: ['Read and make changes to Application records.', 'Add team members to Application records.', 'Read and make changes to Case records.', 'Add team members to Case records.', 'Publish Files to Public File.', 'Read Reference Data.'],
+    cannot: ['Make changes to Reference Data.', 'Change security configuration or assign system roles.']
   },
   {
     name: 'Compliance Lead',
     summary: 'Controls compliance review, quality checks and regulatory adherence.',
-    roles: ['Compliance Lead', 'Quality Review', 'Case Read'],
-    can: ['Review compliance evidence and case quality.', 'Record compliance findings and recommendations.', 'Access dashboards relevant to compliance oversight.'],
-    cannot: ['Override investigation ownership without approval.', 'Deploy changes to Production.', 'Amend reference data without governance approval.']
+    roles: ['Case Editor Role', 'Case Admin', 'Reference Data Reader', 'Case Workflow Manager'],
+    can: ['Read and make changes to Case records.', 'Add team members to Case records.', 'Read Reference Data.', 'Progress Cases to the next stage.'],
+    cannot: ['Read and make changes to Application records.', 'Add team members to Application records.', 'Make changes to Reference Data.', 'Publish Files to Public File.', 'Change security configuration or assign system roles.']
   },
   {
     name: 'Case Worker',
     summary: 'Works assigned cases and records operational case activity.',
-    roles: ['Case Worker', 'Task Contributor', 'Evidence Upload'],
-    can: ['Update assigned case records and tasks.', 'Upload evidence and activity notes.', 'View only the information needed for their work.'],
-    cannot: ['View executive-only information.', 'Approve UAT or Production release.', 'Assign themselves elevated permissions.']
+    roles: ['Application editor Role', 'Case Editor Role', 'Reference Data Reader'],
+    can: ['Read and make changes to Application records.', 'Read and make changes to Case records.', 'Read Reference Data.'],
+    cannot: ['Add team members to Application records.', 'Add team members to Case records.', 'Progress Cases to the next stage.', 'Make changes to Reference Data.', 'Publish Files to Public File.', 'Change security configuration or assign system roles.']
   },
   {
     name: 'Audit & PMO',
     summary: 'Provides audit trail, reporting, project governance and delivery oversight.',
-    roles: ['Audit Read', 'PMO Reporting', 'Change Viewer'],
-    can: ['View change history, audit evidence and delivery metrics.', 'Track status against governance milestones.', 'Export approved reporting where permitted.'],
-    cannot: ['Edit operational case content.', 'Perform system configuration or deployments.', 'Approve business data ownership decisions.']
+    roles: ['System Observer', 'Reference Data Reader'],
+    can: ['Read Application records.', 'Read Case records.', 'Publish Files to Public File.', 'Read Reference Data.'],
+    cannot: ['Make changes to Application records.', 'Add team members to Application records.', 'Make changes to Case records.', 'Add team members to Case records.', 'Make changes to Reference Data.', 'Progress Cases to the next stage.', 'Change security configuration or assign system roles.']
   },
   {
     name: 'Trade Advisory Service (TRAS)',
     summary: 'Supports advisory service activity with controlled access to relevant records.',
-    roles: ['TRAS User', 'Advisory Read/Write', 'Knowledge Contributor'],
-    can: ['Create and update advisory service records.', 'Use approved templates and knowledge content.', 'View relevant TRAS operational information.'],
-    cannot: ['Access restricted investigation-only records.', 'Amend security roles or team membership.', 'Promote changes between environments.']
+    roles: ['Application editor Role', 'Application Team Manager Role', 'Reference Data Reader'],
+    can: ['Read and make changes to Application records.', 'Add team members to Application records.', 'Read Reference Data.'],
+    cannot: ['Read and make changes to Case records.', 'Add team members to Case records.', 'Progress Cases to the next stage.', 'Make changes to Reference Data.', 'Publish Files to Public File.', 'Change security configuration or assign system roles.']
   }
 ];
 
